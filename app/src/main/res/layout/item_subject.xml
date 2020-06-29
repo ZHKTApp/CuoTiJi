@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_item"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_47dp"
+        android:background="@color/gray_efef"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_item_subject_type"
+            style="@style/text_18_wrap"
+            android:layout_marginLeft="17dp"
+            android:text="1.单选题" />
+
+        <TextView
+            android:id="@+id/tv_item_subject_name"
+            style="@style/text_18_wrap"
+            android:layout_marginLeft="@dimen/common_margin_28dp"
+            android:layout_toRightOf="@+id/tv_item_subject_type"
+            android:text="2018高一数学"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_item_subject_time"
+            style="@style/text_18_wrap"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_18dp"
+            android:text="时间 " />
+    </RelativeLayout>
+
+    <com.zwyl.wronglist.util.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="0.5dp">
+
+            <WebView
+                android:id="@+id/webView_participation_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_10dp"
+                tools:ignore="WebViewLayout"></WebView>
+            <TextView
+                android:id="@+id/tv_item_subject_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_item_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/textbook"
+                android:visibility="gone" />
+
+            <VideoView
+                android:id="@+id/video_item_subject"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_20dp"
+                android:visibility="gone" />
+        </FrameLayout>
+    </com.zwyl.wronglist.util.MyScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_47dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin_20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_answer"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/answer" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="对答案"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_look"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/ll_item_subject_answer">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/look" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="看解析"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_listen"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="@dimen/common_margin_20dp"
+            android:layout_toRightOf="@id/ll_item_subject_look">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/listen" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="听讲解"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_addFalse"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_width="113dp"
+            android:layout_marginLeft="@dimen/common_margin_20dp"
+            android:layout_toRightOf="@id/ll_item_subject_listen">
+
+            <ImageView
+                android:id="@+id/iv_item_subject_false"
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/cause" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="加入原因"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_shiftout"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_17dp"
+            android:background="@drawable/drawable_green_bg">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/minus" />
+
+            <TextView
+                android:id="@+id/tv_item_subject_delete"
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="移除"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
